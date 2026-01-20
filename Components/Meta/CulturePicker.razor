@@ -1,0 +1,9 @@
+﻿@using Microsoft.AspNetCore.Localization
+@using Microsoft.AspNetCore.Http
+@inject IHttpContextAccessor HttpContextAccessor
+@inject NavigationManager Nav
+
+<select @onchange="OnChange" value="@CultureInfo.CurrentUICulture.Name">
+    <option value="en-US">English</option>
+    <option value="hu-HU">Magyar</option>
+</select>
