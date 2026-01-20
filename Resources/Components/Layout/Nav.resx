@@ -126,7 +126,7 @@
   <data name="WhatIDo" xml:space="preserve">
     <value>What I do</value>
   </data>
-  <data name="WorkHistory" xml:space="preserve">
+  <data name="CareerHistory" xml:space="preserve">
     <value>Career History</value>
   </data>
 </root>

@@ -126,7 +126,7 @@
   <data name="WhatIDo" xml:space="preserve">
     <value>Mivel foglalkozom</value>
   </data>
-  <data name="WorkHistory" xml:space="preserve">
+  <data name="CareerHistory" xml:space="preserve">
     <value>Karriertörténet</value>
   </data>
 </root>
