@@ -1,0 +1,30 @@
+﻿@if (Mirrored)
+{
+    <RadzenRow class="rz-w-75 rz-w-sm-100">
+        <RadzenColumn Size="8" SizeSM="6" SizeMD="4" SizeLG="3" Order="1" OrderSM="2" OrderLG="2">
+            <RadzenIcon Icon=@Icon Style="font-size: 15rem;" />
+        </RadzenColumn>
+        <RadzenColumn Size="8" SizeSM="6" SizeMD="8" SizeLG="9" Order="2" OrderSM="1" OrderLG="1">
+            <RadzenText TextStyle="TextStyle.DisplayH4" Anchor="@Anchor">@Name</RadzenText>
+            <RadzenText TextStyle="TextStyle.Subtitle2" Style="color: var(--rz-text-tertiary-color);">@ForCompanies</RadzenText>
+            <RadzenText TextStyle="TextStyle.Body1">
+                @Description
+            </RadzenText>
+        </RadzenColumn>
+    </RadzenRow>
+}
+else
+{
+    <RadzenRow class="rz-w-75 rz-w-sm-100">
+        <RadzenColumn Size="8" SizeSM="6" SizeMD="4" SizeLG="3" Order="1" OrderSM="2" OrderLG="1">
+            <RadzenIcon Icon=@Icon Style="font-size: 15rem;" />
+        </RadzenColumn>
+        <RadzenColumn Size="8" SizeSM="6" SizeMD="8" SizeLG="9" Order="2" OrderSM="1" OrderLG="2">
+            <RadzenText TextStyle="TextStyle.DisplayH4" Anchor="@Anchor">@Name</RadzenText>
+            <RadzenText TextStyle="TextStyle.Subtitle2" Style="color: var(--rz-text-tertiary-color);">@ForCompanies</RadzenText>
+            <RadzenText TextStyle="TextStyle.Body1">
+                @Description
+            </RadzenText>
+        </RadzenColumn>
+    </RadzenRow>
+}

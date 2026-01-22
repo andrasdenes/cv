@@ -1,61 +1,69 @@
 ﻿@page "/services"
+@inject IStringLocalizer<Nav> L
 
 <RadzenRow class="rz-w-75 rz-w-sm-100 rz-p-4 rz-pt-2">
     <RadzenColumn Size="8" SizeSM="6" SizeMD="8" SizeLG="9" Order="2" OrderSM="1">
+        
         <RadzenText TextStyle="TextStyle.H2" TagName="TagName.H5">
-            Title
+            @L["Services"]
         </RadzenText>
-        <RadzenText TextStyle="TextStyle.H4" TagName="TagName.H5" Anchor="toc#config-section1">
-            Section 1
-        </RadzenText>
-        <RadzenText TextStyle="TextStyle.Subtitle1" TagName="TagName.P" class="rz-py-8">
-            Section 1 content
-            <div style="width:100px; height:500px; background-color: indianred;"></div>
-        </RadzenText>
-        <RadzenText TextStyle="TextStyle.H4" TagName="TagName.H5" Anchor="toc#config-section2">
-            Section 2
-        </RadzenText>
-        <RadzenText TextStyle="TextStyle.Subtitle1" TagName="TagName.P" class="rz-py-8">
-            Section 2 content
-            <div style="width:100px; height:500px; background-color:salmon;"></div>
-        </RadzenText>
-        <RadzenText TextStyle="TextStyle.H4" TagName="TagName.H5" Anchor="toc#config-section3">
-            Section 3
-        </RadzenText>
-        <RadzenText TextStyle="TextStyle.Subtitle1" TagName="TagName.P" class="rz-py-8">
-            Section 3 content
-            <div style="width:100px; height:500px; background-color:lightsteelblue;"></div>
-        </RadzenText>
-        <RadzenText TextStyle="TextStyle.H4" TagName="TagName.H5" Anchor="toc#config-section4">
-            Section 4
-        </RadzenText>
-        <RadzenText TextStyle="TextStyle.Subtitle1" TagName="TagName.P" class="rz-py-8">
-            Section 4 content
-            <div style="width:100px; height:500px; background-color:teal;"></div>
-        </RadzenText>
-        <RadzenText TextStyle="TextStyle.H4" TagName="TagName.H5" Anchor="toc#config-section5">
-            Section 5
-        </RadzenText>
-        <RadzenText TextStyle="TextStyle.Subtitle1" TagName="TagName.P" class="rz-py-8">
-            Section 5 content
-            <div style="width:100px; height:1000px; background-color:seagreen;"></div>
-        </RadzenText>
-        <h5 id="config-html-heading">HTML heading</h5>
-        <RadzenText TextStyle="TextStyle.Subtitle1" TagName="TagName.P" class="rz-py-8">
-            HTML heading content
-        </RadzenText>
+
+        <div class="rz-py-12 rz-px-6">
+            <Service Icon="troubleshoot"
+                     Name="@L["DigitalCleanup"]"
+                     Description="@L["DigitalCleanupDescription"]"
+                     Mirrored="false"
+                     ForCompanies="@L["ForSmallAndMediumCompanies"]"
+                     Anchor="toc#config-section1" />
+        </div>
+        
+        <div class="rz-py-12 rz-px-6">
+            <Service Icon="component_exchange"
+                     Name="@L["DigitalProcessAutomation"]"
+                     Description="@L["DigitalProcessAutomationDescription"]"
+                     Mirrored="true"
+                     ForCompanies="@L["ForServiceOrAdminHeavyBusinesses"]"
+                     Anchor="toc#config-section2" />
+        </div>
+
+        <div class="rz-py-12 rz-px-6">
+            <Service Icon="partner_exchange"
+                     Name="@L["Consultancy"]"
+                     Description="@L["ConsultancyDescription"]"
+                     Mirrored="false"
+                     ForCompanies="@L["ForCompaniesAndIndividuals"]"
+                     Anchor="toc#config-section3" />
+        </div>
+
+        <div class="rz-py-12 rz-px-6">
+            <Service Icon="terminal"
+                     Name="@L["SoftwareEngineering"]"
+                     Description="@L["SoftwareEngineeringDescription"]"
+                     Mirrored="true"
+                     ForCompanies="@L["ForCompaniesAndIndividuals"]"
+                     Anchor="toc#config-section4" />
+        </div>
+        
+        <div class="rz-py-12 rz-px-6">
+            <Service Icon="concierge"
+                     Name="@L["ItSupport"]"
+                     Description="@L["ItSupportDescription"]"
+                     Mirrored="false"
+                     ForCompanies="@L["ForIndividualEntrepreneurs"]"
+                     Anchor="toc#config-section5" />
+        </div>
+        
         <RadzenText TextStyle="TextStyle.Subtitle1" class="rz-py-12">
-            Copyright &copy; 2026 Radzen Ltd. All rights reserved.
+            @L["copyright"]
         </RadzenText>
     </RadzenColumn>
     <RadzenColumn Size="8" SizeSM="6" SizeMD="4" SizeLG="3" Order="1" OrderSM="2">
         <RadzenToc Selector=".inner-body" style="position: sticky; top: 0; right: 0;">
-            <RadzenTocItem Text="Section 1" Selector="#config-section1"></RadzenTocItem>
-            <RadzenTocItem Text="Section 2" Selector="#config-section2"></RadzenTocItem>
-            <RadzenTocItem Text="Section 3" Selector="#config-section3"></RadzenTocItem>
-            <RadzenTocItem Text="Section 4" Selector="#config-section4"></RadzenTocItem>
-            <RadzenTocItem Text="Section 5" Selector="#config-section5"></RadzenTocItem>
-            <RadzenTocItem Text="HTML Heading" Selector="#config-html-heading"></RadzenTocItem>
+            <RadzenTocItem Text="@L["DigitalCleanup"]" Selector="#config-section1"></RadzenTocItem>
+            <RadzenTocItem Text="@L["DigitalProcessAutomation"]" Selector="#config-section2"></RadzenTocItem>
+            <RadzenTocItem Text="@L["Consultancy"]" Selector="#config-section3"></RadzenTocItem>
+            <RadzenTocItem Text="@L["SoftwareEngineering"]" Selector="#config-section4"></RadzenTocItem>
+            <RadzenTocItem Text="@L["ItSupport"]" Selector="#config-section5"></RadzenTocItem>
         </RadzenToc>
     </RadzenColumn>
 </RadzenRow>

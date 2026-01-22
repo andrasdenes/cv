@@ -11,4 +11,11 @@
     <PackageReference Include="Radzen.Blazor" Version="8.6.3" />
   </ItemGroup>
 
+  <ItemGroup>
+    <Folder Include="Components\0_Atoms\" />
+    <Folder Include="Components\1_Molecules\" />
+    <Folder Include="Data\" />
+    <Folder Include="Resources\Components\2_Organisms\" />
+  </ItemGroup>
+
 </Project>
